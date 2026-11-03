@@ -171,18 +171,104 @@ img {
   background-clip: text;
   color: transparent;
 }
+/* Wadah utama pembungkus hero */
 .hero {
   position: relative;
   text-align: center;
-  margin: 10px 0 0;
+  margin: 10px -50px 0 10px; /* auto di kiri dan kanan membuat kontainer di tengah */
+  display: flex
+  justify-content: center;
+  align-items: center;
 }
-.hero img {
-  width: min(690px, 100%);
+.hero-container {
+  position: relative;
+  display: block;
+  width: min(550px, 100%);
   margin: 0 auto;
 }
-.me {
-  padding: 0 66px;
+
+/* Gambar Bounding Box utama */
+.hero-box {
+  width: 100%;
+  height: auto;
+  display: block;
 }
+
+/* Wadah huruf d-e-v-i-'s diposisikan absolut di tengah kotak */
+.floating-letters {
+  position: absolute;
+  top: 45%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 80%;
+}
+
+/* Pengaturan dasar animasi dinamis untuk semua huruf */
+.floating-letters img {
+  width: auto;
+  display: inline-block;
+  animation: dynamicFloat 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Ukuran spesifik masing-masing huruf agar presisi */
+.floating-letters img.float-d {
+  height: 93px;
+}
+.floating-letters img.float-e {
+  height: 83px;
+}
+.floating-letters img.float-v {
+  height: 73px;
+}
+.floating-letters img.float-i {
+  height: 83px;
+}
+.floating-letters img.float-s {
+  height: 73px;
+}
+
+/* Ukuran dan animasi khusus untuk tanda apostrof (') */
+.floating-letters img.float-apos {
+  height: 23px;
+  animation: dynamicApos 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Animasi dinamis: gabungan naik-turun, sedikit miring (rotate), dan skala tipis */
+@keyframes dynamicFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translateY(-7px) rotate(-2deg) scale(1.02);
+  }
+  66% {
+    transform: translateY(-3px) rotate(2deg) scale(0.98);
+  }
+}
+
+/* Animasi khusus untuk apostrof supaya posisinya tetap di atas tapi ikut dinamis */
+@keyframes dynamicApos {
+  0%, 100% {
+    transform: translateY(-22px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-28px) rotate(-4deg);
+  }
+}
+
+/* Delay yang bervariasi agar efek ombaknya terasa hidup */
+.floating-letters .float-d    { animation-delay: 0s; }
+.floating-letters .float-e    { animation-delay: 0.15s; }
+.floating-letters .float-v    { animation-delay: 0.3s; }
+.floating-letters .float-i    { animation-delay: 0.45s; }
+.floating-letters .float-apos { animation-delay: 0.6s; }
+.floating-letters .float-s    { animation-delay: 0.75s; }
 .me h1 {
   font-size: 32px;
   color: #2f66ad;

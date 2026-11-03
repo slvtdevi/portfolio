@@ -183,13 +183,13 @@ img {
 .hero-container {
   position: relative;
   display: block;
-  width: min(550px, 100%);
+  width: min(600px, 120%);
   margin: 0 auto;
 }
 
 /* Gambar Bounding Box utama */
 .hero-box {
-  width: 100%;
+  width: 120%;
   height: auto;
   display: block;
 }
@@ -217,24 +217,24 @@ img {
 
 /* Ukuran spesifik masing-masing huruf agar presisi */
 .floating-letters img.float-d {
-  height: 93px;
+  height: 105px;
 }
 .floating-letters img.float-e {
-  height: 83px;
+  height: 95px;
 }
 .floating-letters img.float-v {
-  height: 73px;
+  height: 85px;
 }
 .floating-letters img.float-i {
-  height: 83px;
+  height: 95px;
 }
 .floating-letters img.float-s {
-  height: 73px;
+  height: 85px;
 }
 
 /* Ukuran dan animasi khusus untuk tanda apostrof (') */
 .floating-letters img.float-apos {
-  height: 23px;
+  height: 30px;
   animation: dynamicApos 4s ease-in-out infinite;
   transform-origin: bottom center;
 }

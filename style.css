@@ -1,10 +1,25 @@
-/* 1. Daftarkan Font Lokal SF Pro Rounded */
 @font-face {
   font-family: "SF Pro Rounded";
-  src: url("fonts/SFProRounded-Variable.woff2") format("woff2"); /* Pastikan file .woff2 ada di folder fonts */
+  src: url("fonts/SF-Pro-Rounded.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
+}
+
+/* Terapkan SF Pro Rounded khusus untuk semua judul, heading, dan nama */
+.title,
+b,
+h1,
+h2,
+h3,
+h4,
+.big,
+.works h1,
+.me h1,
+.duo h3,
+.cc h4 {
+  font-family: "SF Pro Rounded", "Inter", system-ui, sans-serif !important;
+  font-weight: 700;
 }
 
 :root {
@@ -30,10 +45,16 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* hormati pengguna yang mematikan animasi di perangkatnya */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 body {
   background: var(--bg);
-  font-family:
-    "Inter", system-ui, sans-serif; /* Teks biasa menggunakan Inter */
+  font-family: "Inter", system-ui, sans-serif;
   color: var(--ink);
   min-height: 100vh;
   padding: 56px 20px 70px;
@@ -425,28 +446,16 @@ h2 {
 .kaomoji {
   font-size: 18px;
 }
-/* project & Headings menggunakan SF Pro Rounded */
+/* project */
 .proj {
   --acc: #2f66ad;
 }
 .proj .card {
   padding-bottom: 20px;
 }
-.title,
-h1,
-h2,
-h3,
-h4,
-.big,
-.works h1,
-.me h1,
-.duo h3,
-.cc h4 {
-  font-family: "SF Pro Rounded", "Inter", system-ui, sans-serif;
-  font-weight: 700;
-}
 .title {
   font-size: clamp(40px, 6.4vw, 76px);
+  font-weight: 700;
   color: var(--acc);
   line-height: 1.02;
   letter-spacing: -0.03em;
@@ -723,7 +732,7 @@ h4,
   padding-right: 0;
 }
 .home .duo {
-  margin: 20px 0 34px;
+  margin: 20px 0 34px; /* Angka 70px bisa kamu sesuaikan untuk menambah jarak atasnya */
 }
 .home .contacts {
   padding-top: 26px;
@@ -811,4 +820,48 @@ body.proj .title {
   .design-sys-top {
     grid-template-columns: 1fr;
   }
+}
+.type {
+  color: var(--acc);
+  font-family: "Rethink Sans", "Inter", sans-serif;
+}
+.type-row {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* sesuaikan dengan background */
+}
+.type-sample {
+  margin: 0;
+  line-height: 1.1;
+}
+.type-label {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.75;
+}
+.type-label span {
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
+.w700 {
+  font-weight: 700;
+}
+.w500 {
+  font-weight: 500;
+}
+.w400 {
+  font-weight: 400;
+}
+.s48 {
+  font-size: 48px;
+}
+.s38 {
+  font-size: 38px;
+}
+.s33 {
+  font-size: 33px;
+}
+.s20 {
+  font-size: 20px;
 }

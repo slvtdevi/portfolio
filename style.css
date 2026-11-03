@@ -1,3 +1,12 @@
+/* 1. Daftarkan Font Lokal SF Pro Rounded */
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("fonts/SFProRounded-Variable.woff2") format("woff2"); /* Pastikan file .woff2 ada di folder fonts */
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #dff1fd;
   --ink: #2f66ad;
@@ -23,7 +32,8 @@ html {
 }
 body {
   background: var(--bg);
-  font-family: "Inter", system-ui, sans-serif;
+  font-family:
+    "Inter", system-ui, sans-serif; /* Teks biasa menggunakan Inter */
   color: var(--ink);
   min-height: 100vh;
   padding: 56px 20px 70px;
@@ -415,16 +425,28 @@ h2 {
 .kaomoji {
   font-size: 18px;
 }
-/* project */
+/* project & Headings menggunakan SF Pro Rounded */
 .proj {
   --acc: #2f66ad;
 }
 .proj .card {
   padding-bottom: 20px;
 }
+.title,
+h1,
+h2,
+h3,
+h4,
+.big,
+.works h1,
+.me h1,
+.duo h3,
+.cc h4 {
+  font-family: "SF Pro Rounded", "Inter", system-ui, sans-serif;
+  font-weight: 700;
+}
 .title {
   font-size: clamp(40px, 6.4vw, 76px);
-  font-weight: 700;
   color: var(--acc);
   line-height: 1.02;
   letter-spacing: -0.03em;
@@ -701,7 +723,7 @@ h2 {
   padding-right: 0;
 }
 .home .duo {
-  margin: 20px 0 34px; /* Angka 70px bisa kamu sesuaikan untuk menambah jarak atasnya */
+  margin: 20px 0 34px;
 }
 .home .contacts {
   padding-top: 26px;

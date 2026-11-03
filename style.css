@@ -175,73 +175,80 @@ img {
 .hero {
   position: relative;
   text-align: center;
-  margin: 10px -50px 0 10px; /* auto di kiri dan kanan membuat kontainer di tengah */
-  display: flex
+  margin: 10px auto 0 auto;
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
+
 .hero-container {
   position: relative;
   display: block;
-  width: min(600px, 120%);
+  width: 100%;
+  max-width: 620px;
   margin: 0 auto;
 }
 
-/* Gambar Bounding Box utama */
+/* Gambar Bounding Box utama agar responsif */
 .hero-box {
-  width: 120%;
+  width: 100%;
   height: auto;
   display: block;
 }
 
-/* Wadah huruf d-e-v-i-'s diposisikan absolut di tengah kotak */
+/* Posisi dasar untuk Desktop (supaya pas di tengah visual box) */
+/* Posisi dasar untuk Desktop (supaya pas di tengah visual box) */
 .floating-letters {
   position: absolute;
-  top: 45%;
-  left: 44%;
+  top: 43%;
+  left: 45%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  width: 80%;
+  width: 82%;
 }
 
-/* Pengaturan dasar animasi dinamis untuk semua huruf */
-.floating-letters img {
-  width: auto;
-  display: inline-block;
+/* Ukuran besar yang pas dan stabil untuk Desktop */
+.floating-letters img.float-d {
+  height: clamp(100px, 7.5vw, 98px);
+  animation: dynamicFloat 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.floating-letters img.float-e {
+  height: clamp(100px, 6.8vw, 88px);
+  animation: dynamicFloat 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.floating-letters img.float-v {
+  height: clamp(85px, 6vw, 78px);
+  animation: dynamicFloat 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.floating-letters img.float-i {
+  height: clamp(100px, 6.8vw, 88px);
+  animation: dynamicFloat 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.floating-letters img.float-s {
+  height: clamp(85px, 6vw, 78px);
   animation: dynamicFloat 4s ease-in-out infinite;
   transform-origin: bottom center;
 }
 
-/* Ukuran spesifik masing-masing huruf agar presisi */
-.floating-letters img.float-d {
-  height: 105px;
-}
-.floating-letters img.float-e {
-  height: 95px;
-}
-.floating-letters img.float-v {
-  height: 85px;
-}
-.floating-letters img.float-i {
-  height: 95px;
-}
-.floating-letters img.float-s {
-  height: 85px;
-}
-
-/* Ukuran dan animasi khusus untuk tanda apostrof (') */
+/* Ukuran apostrof untuk Desktop */
 .floating-letters img.float-apos {
-  height: 30px;
+  height: clamp(30px, 2vw, 26px);
   animation: dynamicApos 4s ease-in-out infinite;
   transform-origin: bottom center;
 }
 
-/* Animasi dinamis: gabungan naik-turun, sedikit miring (rotate), dan skala tipis */
+/* Animasi dinamis */
 @keyframes dynamicFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg) scale(1);
   }
   33% {
@@ -252,9 +259,9 @@ img {
   }
 }
 
-/* Animasi khusus untuk apostrof supaya posisinya tetap di atas tapi ikut dinamis */
 @keyframes dynamicApos {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(-22px) rotate(0deg);
   }
   50% {
@@ -263,12 +270,150 @@ img {
 }
 
 /* Delay yang bervariasi agar efek ombaknya terasa hidup */
-.floating-letters .float-d    { animation-delay: 0s; }
-.floating-letters .float-e    { animation-delay: 0.15s; }
-.floating-letters .float-v    { animation-delay: 0.3s; }
-.floating-letters .float-i    { animation-delay: 0.45s; }
-.floating-letters .float-apos { animation-delay: 0.6s; }
-.floating-letters .float-s    { animation-delay: 0.75s; }
+.floating-letters .float-d {
+  animation-delay: 0s;
+}
+.floating-letters .float-e {
+  animation-delay: 0.45s;
+}
+.floating-letters .float-v {
+  animation-delay: 0.2s;
+}
+.floating-letters .float-i {
+  animation-delay: 0.5s;
+}
+.floating-letters .float-apos {
+  animation-delay: 0.6s;
+}
+.floating-letters .float-s {
+  animation-delay: 0.75s;
+}
+
+/* ==========================================
+   KHUSUS UNTUK HP / MOBILE (DI BAWAH 600px)
+   ========================================== */
+@media (max-width: 600px) {
+  .hero-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .floating-letters {
+    gap: 2px;
+    width: 78%;
+    top: 48%;
+    left: 44%;
+    margin-top: -10px;
+  }
+
+  /* Ukuran kecil khusus HP */
+  .floating-letters img.float-d {
+    height: clamp(40px, 13vw, 85px);
+  }
+  .floating-letters img.float-e {
+    height: clamp(36px, 11vw, 75px);
+  }
+  .floating-letters img.float-v {
+    height: clamp(32px, 10vw, 68px);
+  }
+  .floating-letters img.float-i {
+    height: clamp(36px, 11vw, 75px);
+  }
+  .floating-letters img.float-s {
+    height: clamp(32px, 10vw, 68px);
+  }
+
+  /* Apostrof di HP dinaikkan posisinya */
+  .floating-letters img.float-apos {
+    height: clamp(12px, 4vw, 22px);
+    animation: mobileApos 4s ease-in-out infinite;
+    transform-origin: bottom center;
+  }
+
+  /* Keyframe khusus untuk menaikkan apostrof di HP */
+  @keyframes mobileApos {
+    0%,
+    100% {
+      transform: translateY(-22px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-27px) rotate(-2deg);
+    }
+  }
+}
+/* Delay yang bervariasi agar efek ombaknya terasa hidup */
+.floating-letters .float-d {
+  animation-delay: 0s;
+}
+.floating-letters .float-e {
+  animation-delay: 0.15s;
+}
+.floating-letters .float-v {
+  animation-delay: 0.3s;
+}
+.floating-letters .float-i {
+  animation-delay: 0.45s;
+}
+.floating-letters .float-apos {
+  animation-delay: 0.6s;
+}
+.floating-letters .float-s {
+  animation-delay: 0.75s;
+}
+
+/* ==========================================
+   KHUSUS UNTUK HP / MOBILE (DI BAWAH 600px)
+   ========================================== */
+@media (max-width: 600px) {
+  .hero-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .floating-letters {
+    gap: 2px;
+    width: 78%;
+    top: 51%;
+    left: 44%;
+  }
+
+  .floating-letters img.float-apos {
+    gap: 2px;
+    width: 5%;
+    top: 48%;
+    left: 44%;
+  }
+
+  /* Ukuran kecil khusus HP */
+  .floating-letters img.float-d {
+    height: clamp(40px, 13vw, 85px);
+  }
+  .floating-letters img.float-e {
+    height: clamp(36px, 11vw, 75px);
+  }
+  .floating-letters img.float-v {
+    height: clamp(32px, 10vw, 68px);
+  }
+  .floating-letters img.float-i {
+    height: clamp(36px, 11vw, 75px);
+  }
+  .floating-letters img.float-s {
+    height: clamp(32px, 10vw, 68px);
+  }
+  .floating-letters img.float-apos {
+    height: clamp(12px, 4vw, 22px);
+  }
+
+  @keyframes dynamicApos {
+    0%,
+    100% {
+      transform: translateY(-16px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(-2deg);
+    }
+  }
+}
 .me h1 {
   font-size: 32px;
   color: #2f66ad;

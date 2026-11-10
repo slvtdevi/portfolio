@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bens Radio 106.2FM · devi's portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif&family=Outfit:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Warna khusus project Bens Radio: oranye #FF8A18, cokelat #3E2410, krem #FFF2DD */
+      body.bens {
+        --acc: #ff8a18;
+        --accsoft: #fff2dd;
+        --brown: #3e2410;
+        --orange-dark: #b85a00;
+        --line: #f1dfc4;
+      }
+      body.bens .top b,
+      body.bens .top span,
+      body.bens .about p,
+      body.bens .scope,
+      body.bens .cc,
+      body.bens .tsub,
+      body.bens .cap,
+      body.bens .foot span,
+      body.bens .foot a {
+        color: var(--brown);
+      }
+      body.bens .pill {
+        color: var(--orange-dark);
+      }
+      body.bens .scope small {
+        color: var(--orange-dark);
+        opacity: 1;
+      }
+      body.bens .psec h2 {
+        color: var(--acc);
+      }
+      body.bens .cc h4 {
+        color: var(--orange-dark);
+      }
+      body.bens .foot {
+        border-top-color: var(--line);
+      }
+
+      .tagline {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--orange-dark);
+        margin: 6px 0 4px;
+      }
+      .hero-tile {
+        background: var(--accsoft);
+        border-radius: 22px;
+        padding: 34px 20px;
+        margin-top: 22px;
+        text-align: center;
+      }
+      .hero-tile img {
+        height: 340px;
+        width: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        object-fit: contain;
+      }
+
+      /* Research */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .stats .s {
+        background: var(--accsoft);
+        border-radius: 18px;
+        padding: 20px 22px;
+        color: var(--brown);
+      }
+      .stats .s b {
+        display: block;
+        font-size: 30px;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: var(--acc);
+      }
+      .stats .s span {
+        display: block;
+        font-size: 13px;
+        margin-top: 8px;
+        line-height: 1.5;
+      }
+      .stats .s.dark {
+        background: var(--brown);
+        color: var(--accsoft);
+      }
+      .box {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px 24px;
+        color: var(--brown);
+      }
+      .box h4 {
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--orange-dark);
+        margin-bottom: 18px;
+      }
+      .agebar {
+        position: relative;
+        display: flex;
+        height: 36px;
+        border-radius: 999px;
+        overflow: hidden;
+        margin: 6px 0 0;
+      }
+      .agebar i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+      .agebar .a1 {
+        width: 21.9%;
+        background: #ffd2a0;
+      }
+      .agebar .a2 {
+        width: 31.25%;
+        background: var(--acc);
+        color: var(--brown);
+      }
+      .agebar .a3 {
+        width: 46.85%;
+        background: #ece7e0;
+        background-image: repeating-linear-gradient(
+          135deg,
+          transparent 0 6px,
+          rgba(62, 36, 16, 0.08) 6px 8px
+        );
+      }
+      .ageticks {
+        position: relative;
+        height: 22px;
+        margin-top: 8px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .ageticks span {
+        position: absolute;
+        transform: translateX(-50%);
+      }
+      .agenotes {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        font-size: 12px;
+        margin-top: 10px;
+        color: #8a7358;
+      }
+      .agenotes p {
+        max-width: 48%;
+      }
+      .map {
+        position: relative;
+        height: 230px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: linear-gradient(var(--line), var(--line)) center/1px 100%
+            no-repeat,
+          linear-gradient(var(--line), var(--line)) center/100% 1px no-repeat,
+          #fffaf1;
+        margin: 22px 26px;
+      }
+      .map .ax {
+        position: absolute;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: #8a7358;
+      }
+      .map .t {
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .map .b {
+        bottom: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .map .l {
+        left: -24px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+        transform-origin: center;
+      }
+      .map .r {
+        right: -24px;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+      }
+      .map .dot {
+        position: absolute;
+        font-size: 11px;
+        font-weight: 600;
+        white-space: nowrap;
+        transform: translate(-6px, -50%);
+        padding-left: 14px;
+      }
+      .map .dot:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 9px;
+        height: 9px;
+        margin-top: -4.5px;
+        border-radius: 50%;
+        background: #8a7358;
+      }
+      .map .dot.me {
+        color: var(--orange-dark);
+        font-weight: 700;
+        font-size: 12px;
+      }
+      .map .dot.me:before {
+        background: var(--acc);
+        width: 13px;
+        height: 13px;
+        margin-top: -6.5px;
+        box-shadow: 0 0 0 4px rgba(255, 138, 24, 0.25);
+      }
+      .vs {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 14px;
+        align-items: start;
+        font-size: 13px;
+        color: var(--brown);
+      }
+      .vs h5 {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--orange-dark);
+        padding-bottom: 6px;
+        margin-bottom: 8px;
+        border-bottom: 2px solid var(--acc);
+      }
+      .vs ul {
+        list-style: none;
+        padding: 0;
+      }
+      .vs li {
+        padding: 3px 0;
+      }
+      .vs .v {
+        align-self: center;
+        background: var(--acc);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+      }
+
+      /* Strategy */
+      .mantra {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+      .mantra .m {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 18px 20px;
+        color: var(--brown);
+      }
+      .mantra .m h4 {
+        font-size: 20px;
+        color: var(--brown);
+        margin-bottom: 4px;
+      }
+      .mantra .m p {
+        font-size: 13px;
+      }
+      .cc.dark {
+        background: var(--brown);
+        color: var(--accsoft);
+      }
+      body.bens .cc.dark h4 {
+        color: var(--acc);
+      }
+      body.bens .cc.dark {
+        color: var(--accsoft);
+      }
+      .cc.dark .big-idea {
+        font-size: 20px;
+        line-height: 1.35;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .cc.dark .big-idea em {
+        font-style: normal;
+        color: var(--acc);
+      }
+      .cc p {
+        font-size: 14px;
+        line-height: 1.65;
+      }
+      .cc .rtb {
+        margin-top: 14px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(62, 36, 16, 0.2);
+        font-size: 13px;
+      }
+      .prism {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+      .prism .cc h4 {
+        margin-bottom: 6px;
+      }
+      .prism .cc p {
+        font-size: 13px;
+      }
+
+      /* Process */
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+      .step {
+        text-align: center;
+        font-size: 13px;
+        color: var(--brown);
+      }
+      .step .img {
+        position: relative;
+        background: #fff;
+        border: 2px solid var(--brown);
+        border-radius: 16px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        margin-bottom: 12px;
+      }
+      .step .img img {
+        width: auto;
+        height: auto;
+        max-height: 172px;
+        max-width: 100%;
+        margin: 0;
+        object-fit: contain;
+      }
+      .step .n {
+        position: absolute;
+        top: -10px;
+        left: -6px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: var(--acc);
+        color: var(--brown);
+        font-weight: 700;
+        font-size: 12px;
+        display: grid;
+        place-items: center;
+      }
+
+      /* Colour */
+      .swatches {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+      .sw {
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        color: var(--brown);
+      }
+      .sw .c {
+        height: 120px;
+      }
+      .sw div:last-child {
+        padding: 12px 16px;
+        font-size: 13px;
+      }
+      .sw b {
+        display: block;
+        font-size: 15px;
+      }
+
+      /* Logo final */
+      body.bens .logo-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      body.bens .logo-card {
+        background: #fff;
+        border: 2px solid var(--brown);
+        padding: 22px 16px 14px;
+      }
+      body.bens .logo-card img {
+        max-height: 170px;
+        width: auto;
+        max-width: 100%;
+        margin: 0 auto 14px;
+      }
+      body.bens .logo-card small {
+        color: var(--brown);
+        font-weight: 600;
+      }
+      body.bens .logo-card.rev {
+        background: var(--brown);
+      }
+      body.bens .logo-card.rev small {
+        color: var(--accsoft);
+      }
+
+      @media (max-width: 900px) {
+        .stats,
+        .mantra,
+        .prism,
+        .swatches {
+          grid-template-columns: 1fr;
+        }
+        .steps,
+        body.bens .logo-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .vs {
+          grid-template-columns: 1fr;
+        }
+        .vs .v {
+          justify-self: center;
+        }
+        .hero-tile img {
+          height: 240px;
+        }
+        .agenotes {
+          flex-direction: column;
+          gap: 6px;
+        }
+        .agenotes p {
+          max-width: none;
+        }
+        .agebar i {
+          font-size: 9px;
+        }
+      }
+      @media (max-width: 520px) {
+        .steps,
+        body.bens .logo-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body class="proj bens" style="--acc: #ff8a18; --accsoft: #fff2dd">
+    <div class="binder">
+      <nav class="tabs">
+        <a class="tab on" href="bens-radio.html">Bens Radio</a
+        ><a class="tab" href="index.html">Home</a
+        ><a class="tab" href="works.html">Index</a>
+      </nav>
+      <main class="card" id="top">
+        <div class="top">
+          <b>Rebranding</b>
+          <span>VCD III · Brand Redesign · 2026</span>
+        </div>
+        <h1 class="title">Bens Radio 106.2FM</h1>
+        <p class="tagline">“Betawi Punye Gaye, Selera Siape Aje.”</p>
+
+        <div class="hero-tile">
+          <img src="assets/bens-radio-logo.png" alt="Bens Radio 106.2 FM logo" />
+        </div>
+
+        <section class="psec" style="margin-top: 26px">
+          <h2>About the project</h2>
+          <div class="about">
+            <p>
+              <b>Bens Radio</b> is a radio station built on Betawi culture,
+              founded by Benyamin Sueb on 5 March 1990. Today it broadcasts on
+              <b>106.2 FM</b> and has started competing with other stations in
+              the B–C class.<br /><br />
+              This rebranding carries Benyamin's spirit to listeners across
+              generations, through a logo, colour palette and brand voice that
+              feel playful and modern while keeping their Betawi roots.
+            </p>
+            <div class="scope">
+              <small>SCOPE</small>
+              <div>
+                Brand Strategy<br />Brand Identity Prism<br />Logo Design<br />Colour
+                &amp; Mood Direction
+              </div>
+              <small>PROJECT TYPE</small>
+              <div>University Assignment · Rebranding · 2026</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="psec">
+          <div class="shead">
+            <h2>Research data</h2>
+            <span class="pill">Market &amp; audience</span>
+          </div>
+
+          <div class="stats">
+            <div class="s">
+              <b>Since 1990</b>
+              <span>Founded by Benyamin Sueb on 5 March 1990.</span>
+            </div>
+            <div class="s">
+              <b>106.2 FM</b>
+              <span>The new home of Bens Radio.</span>
+            </div>
+            <div class="s dark">
+              <b>2024</b>
+              <span>Starts competing with other radio stations in the B–C class.</span>
+            </div>
+          </div>
+
+          <div class="box" style="margin-top: 16px">
+            <h4>Target audience · Jabodetabek</h4>
+            <div class="agebar">
+              <i class="a1"></i><i class="a2">CORE TARGET (25–35 YRS)</i
+              ><i class="a3"></i>
+            </div>
+            <div class="ageticks">
+              <span style="left: 0; transform: none">18</span>
+              <span style="left: 21.9%">25</span>
+              <span style="left: 53.1%">35</span>
+              <span style="left: 100%; transform: translateX(-100%)">50</span>
+            </div>
+            <div class="agenotes">
+              <p>Lower bias, 18–25 = the new generation.</p>
+              <p style="text-align: right">
+                Upper bias, 35–50 = loyal listeners.
+              </p>
+            </div>
+          </div>
+
+          <div class="two" style="margin-top: 16px; align-items: stretch; gap: 16px">
+            <div class="box">
+              <h4>Positioning map</h4>
+              <div class="map">
+                <span class="ax t">ENTERTAINMENT</span>
+                <span class="ax b">INFORMATIVE</span>
+                <span class="ax l">TRADITIONAL</span>
+                <span class="ax r">MODERN</span>
+                <span class="dot me" style="left: 22%; top: 30%">Bens Radio</span>
+                <span class="dot" style="left: 62%; top: 26%">Prambors</span>
+                <span class="dot" style="left: 56%; top: 40%">Gen FM</span>
+                <span class="dot" style="left: 30%; top: 70%">RRI Jakarta</span>
+              </div>
+            </div>
+            <div class="box">
+              <h4>Parity vs. difference</h4>
+              <div class="vs">
+                <div>
+                  <h5>Point of parity</h5>
+                  <ul>
+                    <li>Music &amp; entertainment</li>
+                    <li>On-air announcers</li>
+                    <li>Listener interaction</li>
+                    <li>Digital platforms</li>
+                    <li>Ads &amp; partnerships</li>
+                  </ul>
+                </div>
+                <div class="v">VS</div>
+                <div>
+                  <h5>Point of difference</h5>
+                  <ul>
+                    <li>Betawi identity</li>
+                    <li>Betawi language &amp; humour</li>
+                    <li>Cultural preservation</li>
+                    <li>Benyamin's legacy</li>
+                    <li>Modern Betawi entertainment</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="psec">
+          <div class="shead">
+            <h2>Brand strategy</h2>
+            <span class="pill">Positioning &amp; big idea</span>
+          </div>
+          <div class="cards2">
+            <div class="cc">
+              <h4>Positioning statement</h4>
+              <p>
+                BENS RADIO is a Betawi culture-based radio station that brings
+                entertainment, music, humour and everyday stories with a
+                <b>bold, outspoken and energetic</b> character, carrying the
+                spirit of Benyamin Sueb to listeners across generations without
+                losing its cultural roots.
+              </p>
+              <p class="rtb">
+                <b>Reasons to believe:</b> the roots of Benyamin Sueb's identity
+                and a commitment to carry Betawi culture forward.
+              </p>
+            </div>
+            <div class="cc dark">
+              <h4>Big idea</h4>
+              <p class="big-idea">
+                Uniting Benyamin's <em>legacy</em>, BENS RADIO's personality,
+                and its relevance for the <em>future</em>.
+              </p>
+              <p>
+                A space to joke, make music and tell stories, where Betawi
+                character keeps on living.
+              </p>
+            </div>
+          </div>
+
+          <p class="tsub">Brand mantra</p>
+          <div class="mantra">
+            <div class="m">
+              <h4>Jenaka (Fun)</h4>
+              <p>Spontaneous, expressive, humorous.</p>
+            </div>
+            <div class="m">
+              <h4>Update</h4>
+              <p>Modern, yet still <b>BETAWI</b>.</p>
+            </div>
+            <div class="m">
+              <h4>Ceplas-Ceplos</h4>
+              <p>Characterful, bold, honest.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="psec">
+          <div class="shead">
+            <h2>Brand identity prism</h2>
+            <span class="pill">Six facets</span>
+          </div>
+          <div class="prism">
+            <div class="cc">
+              <h4>Physique</h4>
+              <p>
+                A moustache made from the letter B, Benyamin's playful face,
+                in orange and brown.
+              </p>
+            </div>
+            <div class="cc">
+              <h4>Personality</h4>
+              <p>Fun and outspoken, like Benyamin's smile in the logo.</p>
+            </div>
+            <div class="cc">
+              <h4>Culture</h4>
+              <p>Carries the soul of Benyamin Sueb as a Betawi man.</p>
+            </div>
+            <div class="cc">
+              <h4>Relationship</h4>
+              <p>
+                A hangout buddy who makes you laugh, close through 106.2 FM.
+              </p>
+            </div>
+            <div class="cc">
+              <h4>Reflection</h4>
+              <p>Relaxed, down-to-earth and loyal listeners.</p>
+            </div>
+            <div class="cc">
+              <h4>Self-image</h4>
+              <p>A cool Betawi radio station: “Betawi punye gaye!”</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="psec">
+          <div class="shead">
+            <h2>Visual development</h2>
+            <span class="pill">Logo process</span>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="img">
+                <span class="n">01</span
+                ><img src="assets/bens-radio-step1.png" alt="Sketch of the letters BENS" />
+              </div>
+              The letters BENS are arranged like a sound wave, the symbol of
+              radio broadcasting.
+            </div>
+            <div class="step">
+              <div class="img">
+                <span class="n">02</span
+                ><img src="assets/bens-radio-step2.png" alt="The letter B shaped as a moustache" />
+              </div>
+              The letter B becomes the moustache and face of Benyamin with a
+              playful expression.
+            </div>
+            <div class="step">
+              <div class="img">
+                <span class="n">03</span
+                ><img src="assets/bens-radio-step3.png" alt="Colour exploration" />
+              </div>
+              Colour exploration.
+            </div>
+            <div class="step">
+              <div class="img">
+                <span class="n">04</span
+                ><img src="assets/bens-radio-logo.png" alt="Final logo" />
+              </div>
+              Final logo!
+            </div>
+          </div>
+        </section>
+
+        <section class="psec">
+          <div class="shead">
+            <h2>Colour palette</h2>
+            <span class="pill">Betawi · Orange · Jenaka</span>
+          </div>
+          <div class="swatches">
+            <div class="sw">
+              <div class="c" style="background: #ff8a18"></div>
+              <div><b>Orange</b>#FF8A18</div>
+            </div>
+            <div class="sw">
+              <div class="c" style="background: #3e2410"></div>
+              <div><b>Brown</b>#3E2410</div>
+            </div>
+            <div class="sw">
+              <div class="c" style="background: #fff2dd"></div>
+              <div><b>Cream</b>#FFF2DD</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="psec">
+          <div class="shead">
+            <h2>Final logo</h2>
+            <span class="pill">Colour · B&amp;W · Reverse · Grid</span>
+          </div>
+          <div class="logo-grid">
+            <div class="logo-card">
+              <img src="assets/bens-radio-logo.png" alt="" />
+              <small>Colour</small>
+            </div>
+            <div class="logo-card">
+              <img src="assets/bens-radio-bw.png" alt="" />
+              <small>B&amp;W</small>
+            </div>
+            <div class="logo-card rev">
+              <img src="assets/bens-radio-reverse.png" alt="" />
+              <small>Reverse</small>
+            </div>
+            <div class="logo-card">
+              <img src="assets/bens-radio-grid.png" alt="" />
+              <small>Grid</small>
+            </div>
+          </div>
+        </section>
+
+        <div class="foot">
+          <span>Bens Radio 106.2FM · Rebranding · 2026</span
+          ><a href="#top">Back to top ↑</a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

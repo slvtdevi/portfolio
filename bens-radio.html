@@ -98,9 +98,7 @@
         color: var(--accsoft);
       }
       .box {
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 22px 24px;
+        padding: 10px 0 0;
         color: var(--brown);
       }
       .box h4 {
@@ -171,12 +169,10 @@
       .map {
         position: relative;
         height: 230px;
-        border: 1px solid var(--line);
         border-radius: 14px;
-        background: linear-gradient(var(--line), var(--line)) center/1px 100%
-            no-repeat,
-          linear-gradient(var(--line), var(--line)) center/100% 1px no-repeat,
-          #fffaf1;
+        background: linear-gradient(#ecd6b4, #ecd6b4) center/1px 100% no-repeat,
+          linear-gradient(#ecd6b4, #ecd6b4) center/100% 1px no-repeat,
+          var(--accsoft);
         margin: 22px 26px;
       }
       .map .ax {
@@ -282,8 +278,7 @@
         gap: 14px;
       }
       .mantra .m {
-        background: #fff;
-        border: 1px solid var(--line);
+        background: var(--accsoft);
         border-radius: 16px;
         padding: 18px 20px;
         color: var(--brown);
@@ -352,7 +347,6 @@
       .step .img {
         position: relative;
         background: #fff;
-        border: 2px solid var(--brown);
         border-radius: 16px;
         height: 200px;
         display: flex;
@@ -393,7 +387,7 @@
       .sw {
         border-radius: 18px;
         overflow: hidden;
-        border: 1px solid var(--line);
+        background: var(--accsoft);
         color: var(--brown);
       }
       .sw .c {
@@ -413,8 +407,8 @@
         grid-template-columns: repeat(4, 1fr);
       }
       body.bens .logo-card {
-        background: #fff;
-        border: 2px solid var(--brown);
+        background: var(--accsoft);
+        border: 0;
         padding: 22px 16px 14px;
       }
       body.bens .logo-card img {
@@ -422,6 +416,9 @@
         width: auto;
         max-width: 100%;
         margin: 0 auto 14px;
+      }
+      body.bens .logo-card:last-child img {
+        mix-blend-mode: multiply;
       }
       body.bens .logo-card small {
         color: var(--brown);

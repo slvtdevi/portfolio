@@ -340,7 +340,7 @@ window.PROJECTS = [
         breakdown: [["likes", "28,469"], ["shares", "11,120"], ["saves", "1,111"], ["comments", "36"]],
         post: {
           // TODO: ganti dengan link post Instagram aslinya (owala x marvel spider-man)
-          url: "https://www.instagram.com/artospateid/",
+          url: "https://www.instagram.com/p/Da-D0QZylPA/",
           thumb: IMG("artospate", "post-thumb.jpg"),
           title: "view the original post on instagram",
           text: "see the original content and its live engagement",

@@ -101,13 +101,13 @@ function renderNav() {
   items.push({ label: "contact me", href: "#checkout", dark: true });
 
   const sign = p === "contents"
-    ? `<img class="open-sign" src="assets/home/open-sign.png" alt="Papan OPEN — toko sedang buka" width="167" height="136">`
+    ? `<img class="open-sign" src="assets/home/open-sign.png" alt="OPEN sign: the shop is open" width="167" height="136">`
     : "";
 
   host.innerHTML = `
     <div class="container">
       ${sign}
-      <nav class="site-nav" aria-label="Navigasi utama">
+      <nav class="site-nav" aria-label="Main navigation">
         ${items.map(navPill).join("")}
       </nav>
     </div>`;
@@ -128,11 +128,11 @@ function renderCheckout() {
     <section class="checkout container" id="checkout" aria-labelledby="checkout-title">
       <div class="checkout__copy">
         <h2 class="checkout__title" id="checkout-title">checkout</h2>
-        <p class="checkout__text">found something you like on the shelves? i’m open for design internships &amp; creative collabs! let's build something cool together</p>
+        <p class="checkout__text">found something you like on the shelves? i’m open to design internships &amp; creative collabs. let’s build something cool together!</p>
         ${navPill({ label: "Email me", href: `mailto:${CONTACT.email}`, dark: true })}
       </div>
       <div class="receipt-wrap">
-        <div class="receipt" role="group" aria-label="Struk belanja devi's mart">
+        <div class="receipt" role="group" aria-label="devi's mart receipt with contact details">
           <div class="receipt__head">
             <p class="receipt__brand">devi's mart</p>
             <p class="receipt__thanks">thank you for stopping by</p>
@@ -212,7 +212,7 @@ function factsCard(f) {
       <div class="facts__row facts__row--bar"><span>made in</span><b>${esc(f.madeIn)}</b></div>
       <div class="facts__row facts__row--label facts__row--line">${esc(f.per)}</div>
       ${rows}
-      <p class="facts__ingredients"><b>ingredients:</b> ${esc(f.ingredients)}<br><b>made by</b> devi <b>tools:</b> ${esc(f.tools)}</p>
+      <p class="facts__ingredients"><b>ingredients:</b> ${esc(f.ingredients)}<br><b>made by</b> ${esc(f.madeBy || "devi")} <b>tools:</b> ${esc(f.tools)}</p>
     </aside>`;
 }
 
@@ -232,6 +232,29 @@ function heroBlock(p) {
         <p class="p-hero__intro">${h.intro}</p>
       </div>
       ${factsCard(p.facts)}
+    </section>`;
+}
+
+/* — Overview: konteks untuk recruiter (jenis project, brief, role, tools) — */
+function overviewBlock(p) {
+  const o = p.overview;
+  if (!o) return "";
+  const row = (label, body) => `<div class="p-overview__row"><dt>${label}</dt><dd>${body}</dd></div>`;
+  return `
+    <section class="p-overview reveal" aria-label="project overview">
+      <h2 class="h-section">overview</h2>
+      <div class="p-overview__card">
+        <div class="p-overview__tags">
+          <span class="p-overview__type">${esc(o.type)}</span>
+          ${o.client ? `<span class="p-overview__client">for ${esc(o.client)}</span>` : ""}
+        </div>
+        <dl class="p-overview__list">
+          ${row("the brief", keepCase(esc(o.brief)))}
+          ${row("my role", `<ul>${o.role.map((r) => `<li>${esc(r)}</li>`).join("")}</ul>`)}
+          ${o.team ? row("team", esc(o.team)) : ""}
+          ${row("tools", esc(p.facts.tools))}
+        </dl>
+      </div>
     </section>`;
 }
 
@@ -447,8 +470,8 @@ function renderProject() {
   if (!p) {
     host.innerHTML = `
       <section class="not-found">
-        <h1 class="h-section">oops, item ini tidak ada di rak</h1>
-        <p class="body-lg">mungkin sudah habis terjual. yuk lihat produk lainnya!</p>
+        <h1 class="h-section">oops, this item isn’t on the shelves</h1>
+        <p class="body-lg">it might be sold out. take a look at the other products!</p>
         ${navPill({ label: "back to the shelves →", href: "contents.html", dark: true })}
       </section>`;
     renderRecommendations(null);
@@ -458,7 +481,7 @@ function renderProject() {
   applyTheme(p.theme);
   applyThemeTint(p.theme.accent);
   document.title = `${p.name} — devi's mart`;
-  host.innerHTML = heroBlock(p) + p.blocks.map((b) => (BLOCKS[b.type] ? BLOCKS[b.type](b) : "")).join("");
+  host.innerHTML = heroBlock(p) + overviewBlock(p) + p.blocks.map((b) => (BLOCKS[b.type] ? BLOCKS[b.type](b) : "")).join("");
   renderRecommendations(p.id);
 }
 

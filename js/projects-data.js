@@ -314,7 +314,7 @@ window.PROJECTS = [
       title: "shop facts", serving: "1 personal shopping service", madeIn: "2026", per: "amount per serving",
       rows: [["sourced countries", "6+"], ["curated finds", "100%"], ["feed & story designs", "100g"], ["applications", "57g"]],
       ingredients: "global personal shopping, trend-driven curation, and scroll-stopping reels",
-      tools: "canva, premiere pro",
+      tools: "canva, capcut",
     },
     overview: {
       type: "client project · freelance",

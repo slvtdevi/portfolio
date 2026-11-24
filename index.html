@@ -1,77 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#a9d3f2">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rethink+Sans:wght@400;500;600;700&family=Funnel+Display:wght@400;800&display=swap" rel="stylesheet">
-  <link rel="preload" href="assets/fonts/sf-pro-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/sf-rounded-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/gorillaz.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="icon" href="assets/products/bens-radio-hover.png">
-  <link rel="stylesheet" href="css/style.css">
-  <script>
-    /* Skala Home Cover: frame Figma 1264×630 dipaskan ke satu layar (100vh). */
-    (function () {
-      function fit() {
-        var w = innerWidth, h = innerHeight, mobile = w <= 760;
-        /* desktop: seluruh frame 1264×630; mobile: stage 560 lebar, total tinggi 1035 */
-        var k = mobile ? Math.min(w / 560, h / 1035) : Math.min(w / 1264, h / 630);
-        document.documentElement.style.setProperty("--k", k.toFixed(4));
-      }
-      fit(); addEventListener("resize", fit);
-    })();
-  </script>
-  <title>devi's mart — visual communication design portfolio 2026</title>
-  <meta name="description" content="a little shop of branding, packaging & social media by Silavati Devi.">
-</head>
-<body data-page="home" class="page-home">
-  <section class="home" aria-labelledby="home-title">
-    <div class="home__awning" data-awning></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#a9d3f2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rethink+Sans:wght@400;500;600;700&family=Funnel+Display:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/sf-pro-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/sf-rounded-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/gorillaz.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="icon" href="assets/products/bens-radio-hover.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      /* Skala Home Cover: frame Figma 1264×630 dipaskan ke satu layar (100vh). */
+      (function () {
+        function fit() {
+          var w = innerWidth,
+            h = innerHeight,
+            mobile = w <= 760;
+          /* desktop: seluruh frame 1264×630; mobile: stage 560 lebar, total tinggi 1035 */
+          var k = mobile
+            ? Math.min(w / 560, h / 1035)
+            : Math.min(w / 1264, h / 630);
+          document.documentElement.style.setProperty("--k", k.toFixed(4));
+        }
+        fit();
+        addEventListener("resize", fit);
+      })();
+    </script>
+    <title>devi's mart — visual communication design portfolio 2026</title>
+    <meta
+      name="description"
+      content="a little shop of branding, packaging & social media by Silavati Devi."
+    />
+  </head>
+  <body data-page="home" class="page-home">
+    <section class="home" aria-labelledby="home-title">
+      <div class="home__awning" data-awning></div>
 
-    <div class="home__middle">
-      <!-- Stage = frame Figma "Home Cover" (1264 × 630), area di antara kanopi & rak.
+      <div class="home__middle">
+        <!-- Stage = frame Figma "Home Cover" (1264 × 630), area di antara kanopi & rak.
            Semua koordinat di sini memakai px Figma, lalu diskalakan oleh --k. -->
-      <div class="home__stage">
-        <img class="hc-sticker hc-sticker--avocado"    src="assets/home/sticker-avocado.png"    alt="" aria-hidden="true">
-        <img class="hc-sticker hc-sticker--fresh"      src="assets/home/sticker-fresh.png"      alt="" aria-hidden="true">
-        <img class="hc-sticker hc-sticker--pear"       src="assets/home/sticker-pear.png"       alt="" aria-hidden="true">
-        <img class="hc-sticker hc-sticker--banana"     src="assets/home/sticker-banana.png"     alt="" aria-hidden="true">
-        <img class="hc-sticker hc-sticker--strawberry" src="assets/home/sticker-strawberry.png" alt="" aria-hidden="true">
-        <img class="hc-sticker hc-sticker--orange"     src="assets/home/sticker-orange.png"     alt="" aria-hidden="true">
+        <div class="home__stage">
+          <img
+            class="hc-sticker hc-sticker--avocado"
+            src="assets/home/sticker-avocado.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="hc-sticker hc-sticker--fresh"
+            src="assets/home/sticker-fresh.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="hc-sticker hc-sticker--pear"
+            src="assets/home/sticker-pear.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="hc-sticker hc-sticker--banana"
+            src="assets/home/sticker-banana.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="hc-sticker hc-sticker--strawberry"
+            src="assets/home/sticker-strawberry.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="hc-sticker hc-sticker--orange"
+            src="assets/home/sticker-orange.png"
+            alt=""
+            aria-hidden="true"
+          />
 
-        <div class="hc-text">
-          <span class="hc-eyebrow">portfolio 2026&nbsp;&nbsp;·&nbsp;&nbsp;visual communication design</span>
+          <div class="hc-text">
+            <span class="hc-eyebrow"
+              >portfolio 2026&nbsp;&nbsp;·&nbsp;&nbsp;visual communication
+              design</span
+            >
 
-          <h1 class="hc-title" id="home-title" aria-label="devi's design market">
-            <span class="hc-devi" aria-hidden="true">
-              <span class="hc-l hc-l--d"><span data-l="d">d</span></span>
-              <span class="hc-l hc-l--e"><span data-l="e">e</span></span>
-              <span class="hc-l hc-l--v"><span data-l="v">v</span></span>
-              <span class="hc-l hc-l--i"><span data-l="i">i</span></span>
-              <span class="hc-l hc-l--s"><span data-l="s">s</span></span>
-              <span class="hc-l hc-l--q"><span data-l="’">’</span></span>
-            </span>
-            <span class="hc-market" aria-hidden="true">
-              <span class="hc-market__line" data-l="design   arket">design   arket</span>
-              <span class="hc-market__m" data-l=" m"> m</span>
-            </span>
-          </h1>
+            <h1
+              class="hc-title"
+              id="home-title"
+              aria-label="devi's design market"
+            >
+              <span class="hc-devi" aria-hidden="true">
+                <span class="hc-l hc-l--d"><span data-l="d">d</span></span>
+                <span class="hc-l hc-l--e"><span data-l="e">e</span></span>
+                <span class="hc-l hc-l--v"><span data-l="v">v</span></span>
+                <span class="hc-l hc-l--i"><span data-l="i">i</span></span>
+                <span class="hc-l hc-l--s"><span data-l="s">s</span></span>
+                <span class="hc-l hc-l--q"><span data-l="’">’</span></span>
+              </span>
+              <span class="hc-market" aria-hidden="true">
+                <span class="hc-market__line" data-l="design   arket"
+                  >design arket</span
+                >
+                <span class="hc-market__m" data-l=" m"> m</span>
+              </span>
+            </h1>
 
-          <p class="hc-sub">a little shop of branding, packaging &amp; social media<br>everything on these shelves is built with so much love <b>♡</b></p>
-          <div class="hc-cta"><a class="nav-pill nav-pill--dark" href="contents.html">look around →</a></div>
-          <p class="hc-hint" data-sticker-hint>psst… the fruit stickers are peelable, drag them around ✦</p>
+            <p class="hc-sub">
+              a little shop of branding, packaging &amp; social media<br />everything
+              on these shelves was created with so much love <b>♡</b>
+            </p>
+            <div class="hc-cta">
+              <a class="nav-pill nav-pill--dark" href="contents.html"
+                >look around →</a
+              >
+            </div>
+            <p class="hc-hint" data-sticker-hint>
+              psst… the fruit stickers are peelable, drag them around ✦
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="home__shelf" data-home-shelf aria-hidden="true"></div>
-  </section>
+      <div class="home__shelf" data-home-shelf aria-hidden="true"></div>
+    </section>
 
-  <footer data-checkout></footer>
-  <script src="js/projects-data.js"></script>
-  <script src="js/main.js"></script>
-</body>
+    <footer data-checkout></footer>
+    <script src="js/projects-data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

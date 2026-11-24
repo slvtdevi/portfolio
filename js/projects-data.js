@@ -40,10 +40,10 @@ window.PROJECTS = [
     hero: {
       layout: "reverse",
       img: IMG("bens-radio", "logo.png"),
-      alt: "Logo baru Bens Radio 106.2 FM",
+      alt: "Bens Radio 106.2 FM new logo",
       tall: true,
       badge: "NEW",
-      intro: "rebranded Bens Radio 106.2 <span class=\"keep-case\">FM</span> as a vibrant, culturally rooted broadcast experience, celebrating Betawi heritage and Benyamin Sueb's iconic comedic spirit for modern audiences and older loyal generations.",
+      intro: "reimagined Bens Radio 106.2FM <span class=\"keep-case\">FM</span> as a vibrant, culturally rooted broadcast experience, celebrating Betawi heritage and Benyamin Sueb's iconic comedic spirit for modern audiences and older loyal generations.",
     },
     facts: {
       title: "brand facts", serving: "1 radio station", madeIn: "2026", per: "amount per brand",
@@ -54,7 +54,7 @@ window.PROJECTS = [
     blocks: [
       { type: "why", paragraphs: [
         "the old logo portrayed benyamin sueb with a stern, fierce expression, making the station feel intimidating and dated rather than welcoming.",
-        "designed primarily for 25–35-year-old listeners. bridging loyal older generations with a younger crowd who want a station that feels like a warm, humorous daily companion.",
+        "designed primarily for listeners aged 25–35. bridging the gap between longtime listeners and younger audiences who want a station that feels like a warm, humorous daily companion.",
       ], highlight: "reimagining benyamin sueb’s iconic persona from stern to joyful and approachable, uniting heritage with modern playfulness." },
       { type: "figures", title: "how",
         lede: "shaped BENS into a dynamic soundwave while tucking Benyamin’s signature smile and mustache into the letter B.",
@@ -89,7 +89,7 @@ window.PROJECTS = [
     hero: {
       img: IMG("bxsea", "logo.png"),
       alt: "Logo baru BXSea",
-      intro: "reimagined BXSea as a playful, family-friendly underwater escape. inviting visitors to dive into diverse marine ecosystems through interactive exhibits.",
+      intro: "reimagined BXSea as a playful, family-friendly underwater escape. inviting visitors to explore diverse marine ecosystems through interactive exhibits.",
     },
     facts: {
       title: "brand facts", serving: "1 aquarium", madeIn: "2025", per: "amount per brand",
@@ -103,7 +103,7 @@ window.PROJECTS = [
         "built for families, kids, and curious visitors. bridging the gap between educational wonder and a warm, approachable leisure destination.",
       ], highlight: "simplifying complex marine illustrations into a bold, playful wordmark that moves like water." },
       { type: "concepts", title: "behind the shapes",
-        lede: "created an integrated wordmark where marine silhouettes live directly inside the letterforms, creating a cleaner, scalable mark for the logo.",
+        lede: "integrated marine silhouettes directly into the letterforms, creating a distinctive and scalable wordmark that evokes the fluidity of water and the diversity of marine life.",
         items: [
           { title: "the “B” & the tail fin", img: IMG("bxsea", "concept-b.png"),
             text: "the “B” incorporates a whale tail fin, turning the initial into a standalone icon that echoes the original marine theme in a cleaner form" },
@@ -140,7 +140,7 @@ window.PROJECTS = [
       img: IMG("kula", "hero.png"),
       alt: "Poster kemasan lip tint KULA",
       tall: true,
-      intro: "reimagined KULA’s packaging to reflect its mission of beauty with impact. blending gentle, everyday lip care with a commitment to giving back to local communities.",
+      intro: "reimagined KULA's packaging to reflect its 'Beauty with Impact' philosophy, combining gentle everyday lip care with a commitment to supporting local communities.",
     },
     facts: {
       title: "product facts", serving: "1 lip tint line (3 shades)", madeIn: "2026", per: "amount per serving",
@@ -173,7 +173,7 @@ window.PROJECTS = [
     hero: {
       img: IMG("na-willa", "logo.png"),
       alt: "Logo Na Willa",
-      intro: "we often get so caught up in chasing the finish line that we forget how to enjoy the walk. <i>Na Willa</i> reminds us that the world is filled with quiet, everyday magic we’ve learned to overlook. The items inside this box aren’t meant to be kept untouched, they’re meant to be stained with your imagination. don’t just watch the film; use it as a lens to rediscover the wonder in your own life.",
+      intro: "we often get so caught up in chasing the finish line that we forget how to enjoy the walk. <i>Na Willa</i> reminds us that the world is filled with quiet, everyday magic we’ve learned to overlook. the items inside this box aren’t meant to be kept untouched; they’re meant to be stained with your imagination. don’t just watch the film; use it as a lens to rediscover the wonder in your own life.",
     },
     facts: {
       title: "product facts", serving: "1 interactive PR kit", madeIn: "2026", per: "amount per serving",
@@ -188,7 +188,7 @@ window.PROJECTS = [
       ], highlight: "turning a film premiere into a warm keepsake that invites young adults to slow down, notice the little things, and capture who they are right now." },
       { type: "panel", title: "the concept", img: IMG("na-willa", "dielines.png"), alt: "Dieline kotak, amplop, kartu prompt, dan kemasan pensil warna Na Willa",
         notes: [
-          "<b>letters to future me</b> as dedicated space to document who you are today. the kit includes writing paper, custom petal-folded envelopes with rounded flaps, and faux wax-seal stickers to lock your thoughts away for your future self.",
+          "<b>letters to future me</b> as a dedicated space to document who you are today. the kit includes writing paper, custom petal-folded envelopes with rounded flaps, and faux wax-seal stickers to lock your thoughts away for your future self.",
           "<b>sketching:</b> a mini pocket sketchbook paired with 12 coloured pencils, encouraging messy, unfiltered doodles over perfection.",
           "<b>colour-coded prompt cards</b> for whenever you don't know where to start. the red cards spark reflection for your future-self letters, while cream cards offer playful visual nudges to fill your sketchbook.",
         ] },
@@ -220,13 +220,13 @@ window.PROJECTS = [
     },
     blocks: [
       { type: "why", paragraphs: [
-        "bncc operates across four different regions—each with its own instagram presence and distinct local character resulting in a fragmented visual identity rather than one unified organization",
+        "bncc operates across four regions, each with its own instagram presence and distinct local identity resulting in a fragmented visual identity rather than one unified organization",
         "built around the metaphor of interlocking puzzle pieces, where every region brings its own unique personality to the table while snapping together to complete a single, cohesive club",
       ], highlight: "unifying four regional chapters through modular puzzle-piece layouts that celebrate individual character within one connected identity" },
       { type: "feature", title: "behind the shapes", small: true,
-        lede: "created an integrated wordmark where marine silhouettes live directly inside the letterforms, creating a cleaner, scalable mark for the logo.",
+        lede: "developed a modular visual system inspired by interlocking puzzle pieces, representing how four regional branches come together to form one cohesive community.",
         img: IMG("bncc", "puzzles.png"), heading: "Interlocking puzzle pieces",
-        html: "the identity introduces <b>interlocking puzzle-piece</b> elements as content containers.<br>a visual metaphor representing how each regional branches interlink and complete each other &lt;3" },
+        html: "the identity introduces <b>interlocking puzzle-piece</b> elements as content containers.<br>a visual metaphor representing how each regional branch interlinks and complete each other &lt;3" },
       { type: "kit", title: "what", specimen: "Rethink Sans",
         swatches: [
           { name: "Green Blue", hex: "#105EA9", fill: "#4489d4" }, { name: "Lapis Lazuli", hex: "#3465A9", fill: "#75b3f1" },
@@ -252,11 +252,11 @@ window.PROJECTS = [
     hero: {
       img: IMG("artospate", "logo.png"),
       alt: "Logo ARTOSPATE",
-      intro: "curated international personal shopping (<i>jastip</i>) service sourcing coveted finds from the us, uk, china, japan, south korea, singapore, and beyond. designed their feed and story layouts, product catalogs, and engaging short-form reels",
+      intro: "n international personal shopping service sourcing curated finds from the US, UK, China, Japan, South Korea, Singapore, and beyond",
     },
     facts: {
       title: "shop facts", serving: "1 curated retail shop", madeIn: "2026", per: "amount per serving",
-      rows: [["sourced countries", "1"], ["curated finds", "100%"], ["feed & story designs", "100g"], ["applications", "57g"]],
+      rows: [["sourced countries", "6+"], ["curated finds", "100%"], ["feed & story designs", "100g"], ["applications", "57g"]],
       ingredients: "global personal shopping, trend-driven curation, and scroll-stopping reels",
       tools: "canva, premiere pro",
     },
@@ -264,8 +264,8 @@ window.PROJECTS = [
       { type: "gallery", title: "social content", cols: 1, card: true, items: [
         { img: IMG("artospate", "posts.png"), alt: "Enam desain post Instagram ARTOSPATE" },
       ] },
-      { type: "insights", title: "an organic post highlight", badge: "verified insights",
-        lede: "one of the campaign posts achieved massive organic traction and engagement entirely without paid promotion. below is the concrete breakdown of its performance along with the direct link to the post:",
+      { type: "insights", title: "an organic performance highlight", badge: "verified insights",
+        lede: "one of the campaign posts gained significant organic reach and engagement without paid promotion. below is the concrete breakdown of its performance along with the direct link to the post:",
         stats: [
           { label: "views", value: "431,595", rows: [["from home", "413,288"], ["from profile", "3,048"], ["from other", "107"], ["non-followers", "97.7%"]] },
           { label: "interactions", value: "42,750", rows: [["accounts engaged", "37,046"], ["non-followers", "99.5%"]] },
@@ -296,7 +296,7 @@ window.PROJECTS = [
     theme: THEMES.sage,
     hero: {
       title: "Digital  Compositing",
-      intro: "a collection of digital compositing works that blend photography with imaginative storytelling. exploring visual manipulation through masking, lighting, perspective, and color grading to transform ordinary scenes into surreal worlds and bring creative concepts to life.",
+      intro: "a collection of digital compositing works that blend photography with imaginative storytelling. hrough masking, lighting, perspective, and color grading, ordinary scenes are transformed into surreal worlds",
     },
     facts: {
       title: "work facts", serving: "2 composited works", madeIn: "2025", per: "amount per serving",
@@ -307,9 +307,9 @@ window.PROJECTS = [
     blocks: [
       { type: "works", title: "what", cols: 2, items: [
         { img: IMG("digital-compositing", "work-01.png"), alt: "Work 01 — stasiun kereta bawah laut",
-          html: "<b>work 01 (underwater world)</b> transforms an ordinary train station into a surreal underwater fantasy, using cyan grading, light rays, and marine elements to create realistic depth, featuring a sea turtle, coral reefs, and an imagined mermaid version of myself." },
+          html: "<b>work 01 (underwater world)</b> transforms an ordinary train station into a surreal underwater fantasy, using cyan grading, light rays, and marine elements to create realistic depth, featuring a sea turtle, coral reefs, and an imagined version of myself as a mermaid." },
         { img: IMG("digital-compositing", "work-02.png"), alt: "Work 02 — poster live action Lonely Castle in the Mirror",
-          html: "<b>work 02 (live action poster)</b> reimagines mizuki tsujimura’s <i>lonely castle in the mirror</i> as a live-action poster starring myself, incorporating indonesian cultural elements. through perspective matching, shadow integration, and reflection compositing, the main character wears traditional batik, while a Barong mask replaces the original wolf mask." },
+          html: "<b>work 02 (live-action poster)</b> reimagines mizuki tsujimura’s <i>lonely castle in the mirror</i> as a live-action poster starring myself, incorporating indonesian cultural elements. through perspective matching, shadow integration, and reflection compositing, the main character wears batik attire, while a Barong mask replaces the original wolf mask." },
       ] },
     ],
   },
@@ -324,8 +324,7 @@ window.PROJECTS = [
     theme: THEMES.sage,
     hero: {
       title: "Illustrations!",
-      intro: "a curated collection of personal and experimental illustrations translating intangible emotions, sensory memories, and quiet comfort into visual for spanning painterly storytelling, geometric abstraction, and nostalgic pop-culture crossovers.",
-    },
+      intro: "a curated collection of personal and experimental illustrations that translate intangible emotions, sensory memories, and moments of quiet comfort into visual narratives. spanning painterly storytelling, geometric abstraction, and nostalgic pop-culture crossovers",
     facts: {
       title: "work facts", serving: "illustrated work", madeIn: "2024-2025", per: "amount per serving",
       rows: [["intangible feelings", "1000%"], ["heart", "1000%"], ["art style", "impressionist"], ["brushstrokes", "150g"]],

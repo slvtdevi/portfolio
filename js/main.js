@@ -94,9 +94,11 @@ function renderNav() {
   const host = $("[data-nav]");
   if (!host) return;
   const p = page();
-  const items = [
+    const items = [
     { label: "home", href: "index.html", current: p === "home" },
     { label: "table of contents", href: "contents.html", current: p === "contents" },
+    { label: "about", href: "about.html", current: p === "about" },
+    { label: "contact me", href: "#checkout", dark: true },
   ];
   if (p === "contents") items.push({ label: "about", href: "about.html" });
   items.push({ label: "contact me", href: "#checkout", dark: true });

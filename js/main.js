@@ -133,7 +133,7 @@ function renderCheckout() {
         <div class="cta-row">
   ${navPill({ label: "Email me", href: `mailto:${CONTACT.email}`, dark: true })}
   ${navPill({
-    label: 'download <span class="keep-case">CV</span> ↓',
+    label: 'download <span class="keep-case"> CV</span> ↓',
     href: CONTACT.cv,
     extra: `download="${CONTACT.cvFileName}"`,
   })}

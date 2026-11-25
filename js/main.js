@@ -9,8 +9,9 @@ const CONTACT = {
   email: "silavati.devi@binus.ac.id",
   instagram: "slvtdevi",
   linkedinName: "Silavati Devi",
-  // TODO: ganti dengan URL profil LinkedIn yang sebenarnya
   linkedinUrl: "https://www.linkedin.com/in/silavati-devi-540049312/",
+  cv: "assets/cv/silavati-devi-cv.pdf",
+  cvFileName: "Silavati-Devi-CV.pdf",                 
 };
 
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -129,7 +130,14 @@ function renderCheckout() {
       <div class="checkout__copy">
         <h2 class="checkout__title" id="checkout-title">checkout</h2>
         <p class="checkout__text">found something you like on the shelves? i’m open to design internships &amp; creative collabs. let’s build something cool together!</p>
-        ${navPill({ label: "Email me", href: `mailto:${CONTACT.email}`, dark: true })}
+        <div class="cta-row">
+  ${navPill({ label: "Email me", href: `mailto:${CONTACT.email}`, dark: true })}
+  ${navPill({
+    label: 'download <span class="keep-case">CV</span> ↓',
+    href: CONTACT.cv,
+    extra: `download="${CONTACT.cvFileName}"`,
+  })}
+</div>
       </div>
       <div class="receipt-wrap">
         <div class="receipt" role="group" aria-label="devi's mart receipt with contact details">
@@ -141,6 +149,7 @@ function renderCheckout() {
             <div class="receipt__row"><span>Email</span><a href="mailto:${CONTACT.email}">${CONTACT.email}</a></div>
             <div class="receipt__row"><span>Instagram</span><a href="https://instagram.com/${CONTACT.instagram}" target="_blank" rel="noopener">@${CONTACT.instagram}</a></div>
             <div class="receipt__row"><span>LinkedIn</span><a href="${CONTACT.linkedinUrl}" target="_blank" rel="noopener">${CONTACT.linkedinName}</a></div>
+            <div class="receipt__row"><span>CV</span><a href="${CONTACT.cv}" download="${CONTACT.cvFileName}">pdf ↓</a></div>
           </div>
           <div class="receipt__total"><span>TOTAL</span><span>1 new brand</span></div>
           <div class="barcode" aria-hidden="true">${barcode()}</div>

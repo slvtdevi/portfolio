@@ -100,8 +100,7 @@ function renderNav() {
     { label: "about", href: "about.html", current: p === "about" },
     { label: "contact me", href: "#checkout", dark: true },
   ];
-  if (p === "contents") items.push({ label: "about", href: "about.html" });
-  items.push({ label: "contact me", href: "#checkout", dark: true });
+  
 
   const sign = p === "contents"
     ? `<img class="open-sign" src="assets/home/open-sign.png" alt="OPEN sign: the shop is open" width="167" height="136">`

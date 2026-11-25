@@ -10,7 +10,7 @@ const CONTACT = {
   instagram: "slvtdevi",
   linkedinName: "Silavati Devi",
   // TODO: ganti dengan URL profil LinkedIn yang sebenarnya
-  linkedinUrl: "https://www.linkedin.com/search/results/all/?keywords=Silavati%20Devi",
+  linkedinUrl: "https://www.linkedin.com/in/silavati-devi-540049312/",
 };
 
 const $ = (sel, root = document) => root.querySelector(sel);

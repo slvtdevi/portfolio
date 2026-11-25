@@ -924,6 +924,12 @@ p {
   align-items: flex-start;
   gap: 1.125rem;
 }
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+}
 .checkout__title {
   font: 700 max(12px, 3.75rem)/1 var(--font-rounded);
   letter-spacing: -1.8px;

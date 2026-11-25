@@ -717,7 +717,7 @@ p {
   top: calc(328.45px + var(--ty));
   transform: translateX(-50%);
   display: flex;
-  gap: 10px;
+  gap: 20px;
   white-space: nowrap;
 }
 .hc-cta .nav-pill {
